@@ -1,0 +1,106 @@
+main {
+  padding: 10px 0;
+}
+main .container {
+  background-color: var(--background-color);
+  padding: 3rem 2rem !important;
+}
+.inputGroup {
+  margin: 20px 0;
+  position: relative;
+  direction: rtl;
+}
+.inputGroup select {
+  font-size: 100%;
+  padding: 0.5em;
+  outline: none;
+  border: 2px solid var(--line-color);
+  background-color: var(--background-color);
+  border-radius: 20px;
+  width: 100%;
+  color: var(--header-color);
+}
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  right: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: var(--paragraph-color);
+}
+
+.inputGroup :is(select:focus, select:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: var(--background-color);
+}
+
+.inputGroup :is(select:focus, select:valid) {
+  border-color: var(--light-blue-color);
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid var(--line-color);
+  background-color: var(--background-color);
+  color: var(--header-color);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup :is(input:focus, input:valid) ~ label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: var(--background-color);
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: var(--light-blue-color);
+}
+
+.b1 {
+  margin: 15px;
+  padding: 15px 30px;
+  background: var(--background-color);
+  font-size: 18px;
+  color: var(--light-blue-color);
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid var(--light-blue-color);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.b1:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 var(--light-blue-color);
+}
+
+.b1:active {
+  transform: scale(0.9);
+}
+.color-h1 {
+  color: var(--header-color);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.para {
+  color: var(--paragraph-color);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+footer h3 {
+  font-size: large;
+  font-weight: bold;
+}

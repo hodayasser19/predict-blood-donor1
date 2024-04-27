@@ -1,0 +1,185 @@
+/* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&family=Nunito+Sans:wght@400;500;700;900&display=swap");
+
+/* Variables */
+:root {
+  --main-ar-font: "Cairo", sans-serif;
+  --main-en-font: "Nunito Sans", sans-serif;
+
+  --main-transition: 0.3s;
+
+  --light-blue-color: #2490eb;
+  --dark-blue-color: #14467b;
+  --header-color: #393939;
+  --paragraph-color: #818488;
+  --background-color: #fff;
+  --line-color: #c4c6c8;
+  --light-line-color: #eae3d9;
+  --section-back-color: #2490eb0d;
+  --footer-back-color: #f4f9fe;
+  --layer-background-color: rgb(255, 255, 255, 0.5);
+}
+.dark-mode-active {
+  --background-color: #333;
+  --header-color: #fff;
+  --paragraph-color: #c4c6c8;
+  --line-color: #a7aaae;
+  --section-back-color: #ffffff08;
+  --footer-back-color: #ffffff1a;
+  --layer-background-color: rgb(0, 0, 0, 0.7);
+}
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+* {
+  font-family: var(--main-ar-font);
+}
+body {
+  position: relative;
+  user-select: none;
+  text-align: inherit;
+  background-color: var(--background-color);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--section-back-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-blue-color);
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+  /* color: #fff; */
+  display: block;
+  line-height: normal !important;
+}
+a:hover {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Scroll To Top */
+.scroll-top {
+  background: var(--light-blue-color);
+  color: #fff;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  bottom: 25px;
+  left: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: var(--main-transition);
+  transform: translateX(calc(-100% - 40px));
+}
+.show-scroll {
+  transform: translateX(0);
+}
+.background {
+  animation: header-slide 1s ease;
+  -webkit-animation: header-slide 1s ease;
+}
+@keyframes header-slide {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/* Start Dark Mode Style */
+.setting {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  z-index: 200;
+  bottom: 25px;
+  padding-right: 5px;
+}
+.setting i {
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--light-blue-color);
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 2px;
+  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.2),
+    0 0px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media (max-width: 767px) {
+  .scroll-top,
+  .setting i {
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+/* End Langauge and DarkMode Style */
+
+/* Nav Bar For Mobile */
+.close1,
+.close3 {
+  width: 100% !important;
+  position: absolute !important;
+  margin-top: 0 !important;
+}
+.close1 {
+  transform: rotateZ(45deg) !important;
+}
+.close3 {
+  transform: rotateZ(-45deg) !important;
+}
+.close2 {
+  width: 0;
+}

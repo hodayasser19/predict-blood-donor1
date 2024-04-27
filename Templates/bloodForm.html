@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Hub || التبرع بالدم</title>
+
+    <!-- Page Logo -->
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png" />
+
+    <!-- Bootstrap Page -->
+
+    <!-- Font Awesome Page -->
+
+    <!-- Global Style Page -->
+
+    <!-- Main Style Page -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+    <!-- Main Style Page -->
+
+    <link rel="stylesheet" href="../static/Css/all.min.css">
+    <link rel="stylesheet" href="../static/Css/bloodForm.css">
+    <link rel="stylesheet" href="../static/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/Css/global.css">
+    <link rel="stylesheet" href="../static/Css/home.css">
+</head>
+
+<body>
+
+    <!-- Start Main Section -->
+    <main>
+        <div class="bg1">
+            <form method="POST" action="/result">
+                <div class="container bg-white p-3 mt-5 shadow-lg rounded">
+                    <div class="row">
+                        <h1 class="color-h1">التبرع بالدم</h1>
+                        <p class="para">من فضلك, ادخل بياناتك الصحية كاملة بدقة!</p>
+
+                        <div class="col-md-6">
+                            <div class="inputGroup">
+
+                                <input type="number" required autocomplete="off" step="0.1" name="hemo" min="12" max="16">
+                                <label for="name">درجة الهيموجلوبين <span class="hint">(الرنج المناسب: 12 - 16 غ/دل)</span></label>
+                            </div>
+
+
+                            <div class="inputGroup">
+
+                                <input type="number" required autocomplete="off" name="age" min="18" max="65">
+                                <label for="name">العمر <span class="hint">(الرنج المناسب: بين 18 و 65 سنة)</span></label>
+                            </div>
+
+                            <div class="inputGroup">
+
+                                <select name="sex" id="sexSelect">
+                              <option selected></option>
+                              <option value="0">ذكر</option>
+                              <option value="1">انثى</option>
+                          </select>
+                                <label for="name">النوع</label>
+                            </div>
+                            <div class="inputGroup" id="hamlGroup" style="display:none;">
+
+                                <select name="haml">
+                             
+                              <option value="1">نعم</option>
+                              <option value="0">لا</option>
+                          </select>
+                                <label for="name">هل يوجد حمل</label>
+                            </div>
+                            <div class="inputGroup">
+
+                                <select name="smoke">
+                              <option selected></option>
+                              <option value="1">نعم</option>
+                              <option value="0">لا</option>
+                          </select>
+                                <label for="name">هل أنت مدخن</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="inputGroup">
+
+                                <input type="number" required autocomplete="off" step="0.1" name="k7owl" min="0" max="10">
+                                <label for="name">استهلاك الكحول اليومي <span class="hint">(الرنج المناسب: 0 - 10 )</span></label>
+                            </div>
+                            <div class="inputGroup">
+
+                                <select name="aghad">
+                              <option selected></option>
+                              <option value="1"> اولى </option>
+                              <option value="2">تانيه </option>
+                              <option value="3"> تالته </option>
+                          </select>
+                                <label for="name"> ما هي درجه التوتر</label>
+                            </div>
+                            <div class="inputGroup">
+
+                                <select name="fshl">
+                              <option selected></option>
+                              <option value="1">نعم</option>
+                              <option value="0">لا</option>
+                          </select>
+                                <label for="name">هل بوجد فشل كلوي مزمن</label>
+                            </div>
+                            <div class="inputGroup">
+
+                                <select name="8oda">
+                              <option selected></option>
+                              <option value="1">نعم</option>
+                              <option value="0">لا</option>
+                          </select>
+                                <label for="name">هل لديك اضطرابات الغدة</label>
+                            </div>
+
+                        </div>
+                        <center>
+                            <input type="submit" class="b1" value="إرسال" />
+                        </center>
+                        <center>
+                            {% if label == 0 %}
+                            <div class="result-message">وفقا للبيانات المدخلة هذا الشخص لا يسمح له بالتبرع بالدم لأنه يعاني من بعض المشاكل الصحية أو الأمراض.</div>
+                            {% elif label == 1 %}
+                            <div class="result-message">وفقا للبيانات المدخلة يسمح لك بالتبرع بالدم بشكل مطمئن.</div>
+                            {% endif %}
+                        </center>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- End Main Section -->
+
+    <!-- Start Footer -->
+    <footer>
+
+
+        <div class="copyright">
+            حقوق النشر &copy; 2024 .Health Hub hh كل الحقوق محفوظة.
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Scroll To Top -->
+    <span class="scroll-top">
+      <i class="fa-solid fa-angle-up"></i>
+    </span>
+    <!-- End Scroll To Top -->
+
+    <!-- Start Language And DarkMode -->
+    <div class="setting">
+        <i class="fa-solid fa-moon dark-mode"></i>
+    </div>
+    <!-- End Language And DarkMode -->
+
+    <!-- Global Js File -->
+    <script src="JS/global.js"></script>
+    <script>
+        document.getElementById('sexSelect').addEventListener('change', function() {
+            var selectedValue = this.value;
+            var hamlGroup = document.getElementById('hamlGroup');
+            if (selectedValue === '1') {
+                hamlGroup.style.display = 'block';
+            } else {
+                hamlGroup.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
